@@ -4,6 +4,8 @@ import About from '../components/About'
 import HeroSection from '../components/HeroSection'
 import Footer from '../components/Footer'
 import Qualities from '../components/Qualities'
+import Menu from '../components/Menu'
+import WhoAreWe from '../components/WhoAreWe'
 
 
 const Home = () => {
@@ -12,9 +14,9 @@ const Home = () => {
       <HeroSection/>
       <About/>
       <Qualities/>
-      {/* <Menu/>
+      <Menu/>
       <WhoAreWe/>
-      <Team/>
+      {/* <Team/>
       <Reservation/> */}
       <Footer/>
     </>
