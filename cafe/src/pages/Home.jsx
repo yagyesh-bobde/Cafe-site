@@ -6,6 +6,8 @@ import Footer from '../components/Footer'
 import Qualities from '../components/Qualities'
 import Menu from '../components/Menu'
 import WhoAreWe from '../components/WhoAreWe'
+import Team from '../components/Team'
+import Reservation from '../components/Reservation'
 
 
 const Home = () => {
@@ -16,8 +18,8 @@ const Home = () => {
       <Qualities/>
       <Menu/>
       <WhoAreWe/>
-      {/* <Team/>
-      <Reservation/> */}
+      <Team/>
+      <Reservation/>
       <Footer/>
     </>
   )
