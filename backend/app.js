@@ -13,20 +13,12 @@ dotenv.config({ path: "./config/config.env" });
 app.use(
   cors({
     // origin: process.env.FRONTEND_URL, // Allow only your frontend's URL
-    origin: ["cafe-site-iu8n.vercel.app"],
+    origin: ["cafe-site-iu8n.vercel.app", "cafe-site-eta.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allowed HTTP methods
     credentials: true, // Allow credentials (cookies, etc.)
   })
 );
 
-// Set additional headers (optional, for clarity)
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  next();
-});
 
 // Explicitly handle preflight OPTIONS requests
 app.options("*", cors());
