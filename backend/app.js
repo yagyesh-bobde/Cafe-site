@@ -38,6 +38,16 @@ app.use(express.urlencoded({ extended: true }));
 // Connect to the database
 dbconnection();
 
+// Health check route
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "UP", message: "Server is healthy!" });
+});
+
+// Root route for testing
+app.get("/", (req, res) => {
+  res.status(200).send("Welcome to the API. The server is running successfully!");
+});
+
 // Use custom error middleware
 app.use(errorMiddleware);
 
@@ -48,4 +58,3 @@ app.use("/api/v1/reservation", reservationRouter);
 console.log("Frontend URL:", process.env.FRONTEND_URL);
 
 export default app;
-
